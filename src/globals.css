@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: black;
+    --foreground: white;
+    --card: black;
+    --card-foreground: #cbd443;
+    --popover: black;
+    --popover-foreground: white;
+    --primary: #cbd443;
+    --primary-foreground: black;
+    --secondary: black;
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: white;
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(0.985 0 0);
+    --border: #cbd443;
+    --input: #cbd443;
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.145 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.985 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.396 0.141 25.723);
+    --destructive-foreground: oklch(0.637 0.237 25.331);
+    --border: oklch(0.269 0 0);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.439 0 0);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(0.269 0 0);
+    --sidebar-ring: oklch(0.439 0 0);
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+.font-share-tech {
+    font-family: 'Share Tech', sans-serif;
+}
+
+.font-share-tech-mono {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    border: none;
+    flex: 0 1 auto;
+}
+
+@media screen and (min-width: 1200px) {
+    .thing {
+        margin-top: 10px;
+        flex: 1;
+    }
+    .thing2 {
+        margin-top: 100px;
+        flex: 1;
+    }
+    button {
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .wrapp {
+        margin-bottom: 200px !important;
+        padding-top: 0 !important;
+    }
+    .thing2 {
+        margin-top: 100px;
+    }
+}
+
+.thing {
+    flex: 1;
+}
+
+.thing2 {
+    flex: 1;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.drawer-close-btn {
+    outline: none !important;
+    border: none !important;
+}
+
+.drawer-close-btn:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.drawer-close-btn:active {
+    outline: none !important;
+    border: none !important;
+}
+
+.drawer-close-btn:focus-visible {
+    outline: none !important;
+    border: none !important;
+}
+
+button {
+    background-color: #cbd443;
+}
+
+.leftb {
+    border-right: 4px dashed black;
+}
+
+.leftb:hover {
+    border-right: 4px dashed #cbd443;
+    border-left: 4px solid #cbd443;
+}
+
+.rightb:hover {
+    border-right: 4px solid #cbd443;
+}
+
+.drawer-close-btn {
+    background-color: black;
+}
+
+/* Package Drawer Cards */
+.package-card {
+    background-color: transparent !important;
+    border: 2px solid #333 !important;
+    border-radius: 0 !important;
+    padding: 1.5rem !important;
+    text-align: left !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 280px !important;
+    color: #ffffff !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.package-card:hover {
+    background-color: rgba(203, 212, 67, 0.05) !important;
+    border-color: #cbd443 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+}
+
+.package-card-selected {
+    border-color: #cbd443 !important;
+    background-color: rgba(203, 212, 67, 0.1) !important;
+    box-shadow: 0 0 0 1px #cbd443 !important;
+}
+
+.package-card-selected:hover {
+    background-color: rgba(203, 212, 67, 0.15) !important;
+}
+
+.package-card-header {
+    margin-bottom: 1rem !important;
+}
+
+.package-card-header h3 {
+    color: #ffffff !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+}
+
+.package-card-header p {
+    color: #cbd443 !important;
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    text-shadow: 0 0 20px rgba(203, 212, 67, 0.3) !important;
+}
+
+.package-card-divider {
+    height: 2px !important;
+    background: linear-gradient(to right, transparent, #cbd443, transparent) !important;
+    margin: 1rem 0 !important;
+}
+
+.package-card-list {
+    line-height: 2 !important;
+    text-align: left !important;
+    color: #ffffff !important;
+    font-size: 1.05rem !important;
+}
+
+.package-card-list li {
+    margin-bottom: 0.5rem !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+.package-card-list ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.package-card-list p {
+    color: #cbd443 !important;
+    font-weight: 600 !important;
+}
+
+@media (max-width: 768px) {
+    .package-card {
+        padding: 1.25rem !important;
+    }
+}
+
