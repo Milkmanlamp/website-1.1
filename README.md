@@ -16,7 +16,7 @@ This is the Vite + React version of the Guava Milk website, converted from Next.
 
 ### Prerequisites
 
-- [Bun](https://bun.sh/) installed (or Node.js/npm)
+- [Bun](https://bun.sh/) installed (
 
 ### Installation
 
